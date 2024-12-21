@@ -279,7 +279,7 @@ nav ul li a {
 /* Nueva sección de separación */
 .separator {
     height: 150px; /* Altura de la sección */
-    background-color: #978908; /* Color de fondo amarillo/naranja vibrante */
+    background-color: #998c00; /* Color de fondo amarillo/naranja vibrante */
     width: 100%; /* Ancho completo */
     display: flex; /* Usar flexbox para alinear los elementos */
     justify-content: center; /* Centrar horizontalmente */
@@ -292,12 +292,17 @@ nav ul li a {
     align-items: center; /* Centrar verticalmente */
 }
 
+/* Estilos para el texto dentro de la content-container */
 .content-container p {
     margin: 0; /* Eliminar márgenes */
     text-align: left; /* Alinear a la izquierda */
     margin-right: 20px; /* Espacio entre el párrafo y el botón */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas (mantenerlo en una línea) */
+    overflow: hidden; /* Ocultar texto que sobrepase el contenedor */
+    text-overflow: ellipsis; /* Añadir puntos suspensivos si el texto es demasiado largo */
 }
 
+/* Estilo para el botón CTA */
 .cta-button {
     background-color: #000000; /* Color de fondo del botón en naranja más oscuro */
     color: #ffffff; /* Texto blanco para el botón */
@@ -310,6 +315,97 @@ nav ul li a {
 
 .cta-button:hover {
     background-color: #E65C00; /* Color de fondo del botón al pasar el ratón (más oscuro) */
+}
+
+/* Media Queries para Responsividad */
+
+/* Solo para dispositivos móviles (máximo 768px) */
+@media (max-width: 768px) {
+    .separator {
+        height: 120px; /* Reduce la altura para móviles */
+        padding: 10px; /* Menos padding en móviles */
+    }
+
+    .content-container {
+        flex-direction: column; /* Cambia la disposición a columna en móviles */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .content-container p {
+        margin-right: 0; /* Eliminar espacio a la derecha */
+        margin-bottom: 15px; /* Espacio entre el texto y el botón */
+        font-size: 18px; /* Aumentar el tamaño de la fuente en móviles */
+        text-align: center; /* Centrado en móviles */
+        width: 100%; /* Asegura que el texto ocupe el ancho completo */
+    }
+
+    .cta-button {
+        font-size: 14px; /* Fuente más pequeña para el botón */
+        padding: 8px 15px; /* Menos padding en botones en móviles */
+    }
+}
+
+/* Solo para dispositivos de escritorio (PC) - a partir de 769px */
+@media (min-width: 769px) {
+    .separator {
+        height: 150px; /* Altura estándar en computadoras */
+    }
+
+    .content-container {
+        flex-direction: row; /* Mantiene los elementos en fila */
+        text-align: left; /* Mantiene el texto alineado a la izquierda */
+    }
+
+    .content-container p {
+        font-size: 18px; /* Fuente más grande para computadoras */
+        margin-right: 20px; /* Espacio adecuado entre texto y botón */
+    }
+
+    .cta-button {
+        font-size: 16px; /* Fuente de tamaño normal */
+        padding: 12px 25px; /* Padding más amplio para computadoras */
+    }
+}
+
+
+    .content-container {
+        flex-direction: column; /* Cambia la disposición a columna en móviles */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+    }
+
+    .content-container p {
+        margin-right: 0; /* Eliminar espacio a la derecha */
+        margin-bottom: 15px; /* Espacio entre el texto y el botón */
+        font-size: 14px; /* Fuente más pequeña */
+    }
+
+    .cta-button {
+        font-size: 14px; /* Fuente más pequeña para el botón */
+        padding: 8px 15px; /* Menos padding en botones en móviles */
+    }
+}
+
+/* Solo para dispositivos de escritorio (PC) - a partir de 769px */
+@media (min-width: 769px) {
+    .separator {
+        height: 150px; /* Altura estándar en computadoras */
+    }
+
+    .content-container {
+        flex-direction: row; /* Mantiene los elementos en fila */
+        text-align: left; /* Mantiene el texto alineado a la izquierda */
+    }
+
+    .content-container p {
+        font-size: 18px; /* Fuente más grande para computadoras */
+        margin-right: 20px; /* Espacio adecuado entre texto y botón */
+    }
+
+    .cta-button {
+        font-size: 16px; /* Fuente de tamaño normal */
+        padding: 12px 25px; /* Padding más amplio para computadoras */
+    }
 }
 
 
@@ -399,7 +495,7 @@ section h2 {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espacio entre los iconos */
+    gap: 20px; /* Espacio entre los iconos en pantallas grandes */
 }
 
 .social-icon {
@@ -411,6 +507,21 @@ section h2 {
 .social-icon:hover {
     color: #f7c600; /* Color amarillo al pasar el cursor */
 }
+
+/* Media Queries para Responsividad */
+
+/* Solo para dispositivos móviles (máximo 768px) */
+@media (max-width: 768px) {
+    /* Ajuste de espacio entre iconos en móviles */
+    .social-icons {
+        gap: 10px; /* Menor espacio entre los iconos */
+    }
+
+    .social-icon {
+        font-size: 1.5em; /* Reduce el tamaño de los iconos en móviles */
+    }
+}
+
 
 
 
@@ -592,4 +703,295 @@ footer i {
 
 
     
+}
+
+
+    .visible-images img {
+        width: 60px; /* Tamaño de las imágenes en móviles pequeños */
+        height: auto; /* Mantener la relación de aspecto */
+    }
+
+    #seccion-galeria {
+        padding: 10px; /* Reducir espaciado interno en móviles pequeños */
+    }
+
+
+}
+
+#social-media {
+    margin-top: 20px; /* Ajusta el valor según necesites */
+}        
+
+/* Estilos generales para pantallas grandes */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilos para pantallas móviles (menos de 768px de ancho) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Opcional: ajusta el tamaño de fuente para móviles */
+    }
+    
+    .container {
+        text-align: right; /* Alinea el texto a la derecha */
+        width: 100%; /* Puede ajustarse para que ocupe todo el ancho de la pantalla */
+        padding-right: 10px; /* Añade un poco de espacio a la derecha si es necesario */
+    }
+}
+
+ /* Estilos generales para pantallas grandes */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilos para pantallas móviles (menos de 768px de ancho) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce el tamaño de la fuente para móviles */
+    }
+    
+    .container {
+        text-align: right; /* Alinea el texto a la derecha */
+        width: 100%; /* Usa el 100% del ancho disponible */
+        padding-right: 10px; /* Añade un poco de espacio a la derecha */
+        word-wrap: break-word; /* Evita que las palabras largas se desborden */
+        overflow-wrap: break-word; /* Alternativa más moderna */
+        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    }
+
+    /* Ajustar el tamaño de la fuente según el ancho */
+    h1, h2, h3, p { 
+        font-size: 14px; /* Ajusta el tamaño de texto en los encabezados y párrafos */
+    }
+
+    /* Si se necesitan márgenes para mejorar la legibilidad */
+    h1, h2, h3, p {
+        margin: 10px 0; /* Márgenes para separar los textos */
+    }
+}
+ 
+/* Estilos generales para los botones */
+.social-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones en la pantalla */
+    gap: 15px; /* Espacio entre los botones */
+    padding: 10px;
+}
+
+.social-icon {
+    font-size: 2rem; /* Tamaño de los iconos */
+    color: #333; /* Color de los iconos */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Color al pasar el cursor */
+}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+
+    /* Ajustar el tamaño y espaciado del título de los proyectos */
+    #projects h2 {
+        font-size: 24px; /* Tamaño de fuente más pequeño */
+        text-align: center; /* Centrar el título */
+        margin-bottom: 20px; /* Espacio debajo del título */
+        padding: 0 10px; /* Añadir algo de espacio a los lados */
+    }
+
+    /* Ajustar el tamaño del título de cada proyecto */
+    .project-item h3 {
+        font-size: 18px; /* Tamaño de los encabezados de los proyectos */
+        text-align: center; /* Centrar el título */
+        margin-top: 15px; /* Espacio superior */
+        margin-bottom: 10px; /* Espacio inferior */
+    }
+
+    /* Descripción de los proyectos */
+    .project-item p {
+        font-size: 14px;  /* Tamaño de texto para la descripción */
+        line-height: 1.6;  /* Aumentar el interlineado para mayor legibilidad */
+        color: #ccc;  /* Color gris claro */
+        margin-bottom: 20px; /* Espacio entre la descripción y la imagen */
+        padding: 0 10px; /* Añadir algo de espacio a los lados */
+    }
+
+    /* Ajustar el tamaño de las imágenes de los proyectos */
+    .project-img {
+        width: 100%;  /* Ocupa el 100% del ancho disponible */
+        height: auto;  /* Mantiene la proporción de la imagen */
+        border-radius: 8px;  /* Bordes redondeados */
+        margin-bottom: 15px;  /* Espacio debajo de la imagen */
+        object-fit: cover;  /* Asegura que la imagen cubra el área sin distorsionarse */
+    }
+
+    /* Ajustar la disposición de los proyectos en una columna */
+    .projects-grid {
+        grid-template-columns: 1fr;  /* Muestra los proyectos en una sola columna */
+        gap: 20px;  /* Espacio entre los proyectos */
+        padding: 10px;  /* Añadir espacio interno */
+    }
+
+    /* Estilo para cada item de proyecto */
+    .project-item {
+        padding: 15px;  /* Añadir espacio dentro de cada proyecto */
+        background-color: #222;  /* Fondo oscuro para cada proyecto */
+        border-radius: 8px;  /* Bordes redondeados */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+        overflow: hidden;  /* Ocultar cualquier contenido que sobresalga */
+    }
+
+    /* Espaciado para los enlaces */
+    .project-item a {
+        display: block;
+        text-align: center;  /* Centrar los enlaces */
+    }
+
+    /* Espaciado adecuado para la cuadrícula de proyectos */
+    .projects-grid {
+        margin-bottom: 20px;  /* Separar la sección de proyectos del pie de página */
+    }
+
+    /* Ajuste para los botones de redes sociales */
+    .social-buttons {
+        justify-content: space-evenly;  /* Distribuir los botones de manera uniforme */
+    }
+
+    .social-icon {
+        font-size: 1.5rem;  /* Reducir tamaño de los iconos */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-buttons {
+        flex-direction: column;  /* Cambiar la disposición a columna */
+        align-items: center;  /* Centrar los botones */
+    }
+
+    .social-icon {
+        font-size: 1.2rem;  /* Hacer los iconos más pequeños */
+        margin-bottom: 10px;  /* Añadir espacio entre los iconos */
+    }
+
+    /* Ajustes para los títulos de los proyectos */
+    .project-item h3 {
+        font-size: 16px;  /* Reducir tamaño de los títulos */
+    }
+
+    /* Descripciones de los proyectos */
+    .project-item p {
+        font-size: 13px;  /* Reducir el tamaño del texto */
+        line-height: 1.5;  /* Ajustar interlineado */
+    }
+}
+
+/* Nueva sección de separación */
+.separator {
+    height: 150px; /* Altura de la sección */
+    background-color: #998c00; /* Color de fondo amarillo/naranja vibrante */
+    width: 100%; /* Ancho completo */
+    display: flex; /* Usar flexbox para alinear los elementos */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    color: #2D2D2D; /* Color del texto oscuro para mejor legibilidad */
+}
+
+.content-container {
+    display: flex; /* Usar flexbox para alinear el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Asegura que todo el contenido se centre */
+    width: 100%; /* Ocupa todo el ancho */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas líneas si es necesario */
+}
+
+/* Estilos para el texto dentro de la content-container */
+.content-container p {
+    margin: 0; /* Eliminar márgenes */
+    text-align: left; /* Alinear a la izquierda */
+    margin-right: 20px; /* Espacio entre el párrafo y el botón */
+    white-space: normal; /* Permite que el texto se divida en varias líneas si es necesario */
+    overflow: visible; /* Asegura que el texto no se oculte */
+    text-overflow: unset; /* Elimina los puntos suspensivos */
+}
+
+/* Estilo para el botón CTA */
+.cta-button {
+    background-color: #000000; /* Color de fondo del botón en naranja más oscuro */
+    color: #ffffff; /* Texto blanco para el botón */
+    padding: 10px 20px; /* Espacio dentro del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave al pasar el ratón */
+}
+
+.cta-button:hover {
+    background-color: #E65C00; /* Color de fondo del botón al pasar el ratón (más oscuro) */
+}
+
+/* Media Queries para Responsividad */
+
+/* Solo para dispositivos móviles (máximo 768px) */
+@media (max-width: 768px) {
+    .separator {
+        height: 120px; /* Reduce la altura para móviles */
+        padding: 10px; /* Menos padding en móviles */
+    }
+
+    .content-container {
+        flex-direction: column; /* Cambia la disposición a columna en móviles */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: center; /* Centra los elementos verticalmente */
+    }
+
+    .content-container p {
+        margin-right: 0; /* Eliminar espacio a la derecha */
+        margin-bottom: 15px; /* Espacio entre el texto y el botón */
+        font-size: 18px; /* Aumentar el tamaño de la fuente en móviles */
+        text-align: center; /* Centrado en móviles */
+        width: 100%; /* Asegura que el texto ocupe el ancho completo */
+        line-height: 1.5; /* Mayor espacio entre las líneas para evitar apilamiento */
+    }
+
+    .cta-button {
+        font-size: 14px; /* Fuente más pequeña para el botón */
+        padding: 8px 15px; /* Menos padding en botones en móviles */
+    }
+}
+
+/* Solo para dispositivos de escritorio (PC) - a partir de 769px */
+@media (min-width: 769px) {
+    .separator {
+        height: 150px; /* Altura estándar en computadoras */
+    }
+
+    .content-container {
+        flex-direction: row; /* Mantiene los elementos en fila */
+        text-align: left; /* Mantiene el texto alineado a la izquierda */
+    }
+
+    .content-container p {
+        font-size: 18px; /* Fuente más grande para computadoras */
+        margin-right: 20px; /* Espacio adecuado entre texto y botón */
+    }
+
+    .cta-button {
+        font-size: 16px; /* Fuente de tamaño normal */
+        padding: 12px 25px; /* Padding más amplio para computadoras */
+    }
 }
